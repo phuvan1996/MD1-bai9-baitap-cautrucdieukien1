@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cấu trúc điều kiện-bài tập 2</title>
+</head>
+<body>
+<p><b>Bài 2 :</b>Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.</p>
+<label for="tuoiHocSinh">nhập số tuổi :</label>
+<input type="text" size="10px" id="tuoiHocSinh">
+<input type="button" value="Check" onclick="CheckAge()">
+<p id="result2"><br></p>
+<script>
+  function CheckAge() {
+    let age = parseInt(document.getElementById("tuoiHocSinh").value);
+    let res = document.getElementById("result2");
+    if (!isNaN(age)) {
+      if (age >=16) {
+        res.innerHTML = "<b>đủ điều kiện.</b>";
+      } else {
+        res.innerHTML = "<b> không đủ điều kiện.</b>";
+      }
+    } else {
+      res.innerHTML = "<b> nhập vào số tuổi</b>"
+    }
+  }
+</script>
+</body>
+</html>

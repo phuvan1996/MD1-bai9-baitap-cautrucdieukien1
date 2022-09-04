@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cấu trúc điều kiện-bài tập 4</title>
+</head>
+<body>
+<p><b>Bài 4 :</b> Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó.</p>
+<label for="so1">số 1:</label>
+<input type="text" size="10px" id="so1">
+<label for="so2">số 2:</label>
+<input type="text" size="10px" id="so2">
+<label for="so3">số 3:</label>
+<input type="text" size="10px" id="so3">
+<input type="button" value="Check" onclick="findMax()">
+<p id="ketQua4"><br></p>
+<script>
+  function findMax() {
+    let so1 = parseInt(document.getElementById("so1").value);
+    let so2 = parseInt(document.getElementById("so2").value);
+    let so3 = parseInt(document.getElementById("so3").value);
+    let res = document.getElementById("ketQua4");
+    if (isNaN(so1)||isNaN(so2)||isNaN(so3)) {
+      res.innerHTML = "<b>nhập vào 1 số.</b>"
+    } else {
+      if (so1>so2) {
+        if (so1>so3) {
+          res.innerHTML = "<b>số 1 là số lơn nhất</b>"
+        } else {
+          res.innerHTML = "<b>số 3 là số lớn nhất</b>"
+        }
+      } else {
+        if (so2>so3) {
+          res.innerHTML = "<b>số 2 là số lớn nhất</b>"
+        } else {
+          res.innerHTML = "<b>số 3 là số lớn nhất</b>"
+        }
+      }
+    }
+  }
+</script>
+</body>
+</html>

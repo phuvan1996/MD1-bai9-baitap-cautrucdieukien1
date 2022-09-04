@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cấu trúc điều kiện-bài tập 5</title>
+</head>
+<body>
+<p><b>Bài 5 :</b>  Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ.</p>
+<label for="baiKiemTra">bài kiểm tra:</label>
+<input type="text" size="10px" id="baiKiemTra">
+<label for="diemThiGiuaKi">điểm thi giũa kì:</label>
+<input type="text" size="10px" id="diemThiGiuaKi">
+<label for="diemThiCuoiKi">điểm thi cuối kì:</label>
+<input type="text" size="10px" id="diemThiCuoiKi">
+<input type="button" value="xepHang" onclick="xepHang()">
+<!--<p><i>Notes:</i> Formula : Rank = ((diligent-mark)*2 + (mid-term-mark)*2 + (final-term-mark)*6)/10 </p>-->
+<p id="ketQua"><br></p>
+<script>
+  function xepHang() {
+    let baiKiemTra = parseInt(document.getElementById("baiKiemTra").value);
+    let diemThiGiuaKi = parseInt(document.getElementById("diemThiGiuaKi").value);
+    let diemThiCuoiKi = parseInt(document.getElementById("diemThiCuoiKi").value);
+    let res = document.getElementById("ketQua");
+    if (isNaN(baiKiemTra)||isNaN(diemThiGiuaKi)||isNaN(diemThiCuoiKi)) {
+      res.innerHTML = "<b>nhập vào 1 số</b>"
+    } else if ( baiKiemTra > 10 ||baiKiemTra < 0
+            || diemThiGiuaKi > 10 || diemThiCuoiKi < 0
+            || diemThiCuoiKi > 10 || diemThiCuoiKi < 0 ) {
+      res.innerHTML = "<b>nhập số 0 --> 10</b>"
+    } else {
+      let xepHang = ((baiKiemTra)*2 + (diemThiGiuaKi)*2 + (diemThiCuoiKi)*6)/10;
+      if ( xepHang >= 8 ) {
+        res.innerHTML = "<b>xếp hạng: xuất sắc. </b>"
+      } else if (xepHang < 8 && xepHang >= 6.5) {
+        res.innerHTML = "<b>xếp hạng: giỏi. </b>"
+      } else if ( xepHang <6.5 && xepHang >= 5) {
+        res.innerHTML = "<b>xếp hạng: khá.</b>"
+      } else {
+        res.innerHTML = "<b>xếp hạng: trung bình.</b>"
+      }
+    }
+  }
+</script>
+</body>
+</html>

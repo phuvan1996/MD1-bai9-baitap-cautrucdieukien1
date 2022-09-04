@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cấu trúc điều kiện-bài tập 6</title>
+</head>
+<body>
+<p><b>Bài 6 :</b> Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng.</p>
+<label for="sales">doanh số bán được:</label>
+<input type="text" size="10px" id="sales">
+<label for="amount">doanh số phải bán:(VND)</label>
+<input type="text" size="10px" id="amount">
+<input type="button" value="hoaHong" onclick="hoaHong()">
+<p id="ketQua"><br></p>
+<script>
+  function hoaHong() {
+    let sales = parseInt(document.getElementById("sales").value);
+    let   amount = parseInt(document.getElementById("amount").value);
+    let res = document.getElementById("ketQua");
+    if (isNaN(sales)==true || isNaN(amount)==true) {
+      res.innerHTML = "<b>Input must be a number !</b>";
+    } else {
+      if (sales> amount) {
+        res.innerHTML = "<b>hoa hồng nhận được 25%(số tiền là) :</b>" + sales * 0.3 +"<b>VND</b>";
+      } else {
+        res.innerHTML = "<b>hoa hồng nhận được 8% (số tiền là):</b>" + sales * 0.1 +"<b>VND</b>";
+      }
+    }
+  }
+</script>
+</body>
+</html>

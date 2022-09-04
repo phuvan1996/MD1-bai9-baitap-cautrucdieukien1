@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cấu trúc điều kiện-bài tập 7</title>
+</head>
+<body>
+<p><b>Bài 7 :</b> Tính cước điện thoại cho một hộ gia đình với các thông số đã cho.</p>
+<label for="tax">thuế:</label>
+<input type="text" size="10px" id="tax">
+<label for="amountNumber">số lượng dùng:</label>
+<input type="text" size="10px" id="amountNumber">
+<input type="button" value="Pay" onclick="Pay()">
+<p id="ketQua"><br></p>
+</body>
+<script>
+  function Pay() {
+    let tax = parseInt(document.getElementById("tax").value);
+    let amount = parseInt(document.getElementById("amountNumber").value);
+    let res = document.getElementById("ketQua");
+    if (isNaN(tax)==true || isNaN(amount)==true) {
+      res.innerHTML = "<b>Input must be a number !</b>";
+    } else {
+      res.innerHTML = "<b>Total must be pay :</b>" + tax*amount;
+    }
+  }
+</script>
+</html>

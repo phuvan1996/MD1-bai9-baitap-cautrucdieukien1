@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cấu trúc điều kiện-01</title>
+</head>
+<body>
+<p><b>Bài 1 :</b>Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không ?</p>
+<label for="a">Number a :</label><input type="text" size="15px" id="a">
+<label for="b">Number b :</label><input type="text" size="15px" id="b">
+<input type="button" value="Check" onclick="CheckAdivB()">
+<p id="result1"><br></p>
+<script>
+    function CheckAdivB() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let res = document.getElementById("result1");
+        if (isNaN(a)==true || isNaN(b)==true) {
+            res.innerHTML = "<b>nhập số bất kì !</b>";
+        } else {
+            if (a%b == 0) {
+                res.innerHTML = "<b> a chia hết cho b.</b>";
+            } else {
+                res.innerHTML = "<b> a không chia hết cho b.</b>";
+            }
+        }
+    }
+</script>
+</body>
+</html>

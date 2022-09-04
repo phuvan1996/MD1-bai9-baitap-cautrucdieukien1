@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cấu trúc điều kiện-bài tập 3</title>
+</head>
+<body>
+<p><b>Bài 3 :</b>Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0.</p>
+<label for="checkNum">Number :</label>
+<input type="text" size="10px" id="kiemTraSo">
+<input type="button" value="KiemTraSo" onclick="soSanhSoLonHon0()">
+<p id="ketQua"><br></p>
+<script>
+    function soSanhSoLonHon0() {
+        let num = parseInt(document.getElementById("kiemTraSo").value);
+        let res = document.getElementById("ketQua");
+        if (!isNaN(num)) {
+            if (num>0){
+                res.innerHTML = "<b>" + num + " > 0</b>";
+            } else {
+                res.innerHTML = "<b>" + num + " < 0</b>";
+            }
+        } else {
+            res.innerHTML = "<b>nhập số bất kì !</b>" ;
+        }
+    }
+</script>
+</body>
+</html>
