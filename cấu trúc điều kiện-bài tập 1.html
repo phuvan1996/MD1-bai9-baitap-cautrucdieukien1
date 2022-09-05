@@ -8,15 +8,15 @@
 <p><b>Bài 1 :</b>Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không ?</p>
 <label for="a">Number a :</label><input type="text" size="15px" id="a">
 <label for="b">Number b :</label><input type="text" size="15px" id="b">
-<input type="button" value="Check" onclick="CheckAdivB()">
-<p id="result1"><br></p>
+<input type="button" value="Check" onclick="check_avab()">
+<p id="result"><br></p>
 <script>
-    function CheckAdivB() {
+    function check_avab() {
         let a = parseInt(document.getElementById("a").value);
         let b = parseInt(document.getElementById("b").value);
-        let res = document.getElementById("result1");
+        let res = document.getElementById("result");
         if (isNaN(a)==true || isNaN(b)==true) {
-            res.innerHTML = "<b>nhập số bất kì !</b>";
+            res.innerHTML = "<b>vui lòng nhập số !</b>";
         } else {
             if (a%b == 0) {
                 res.innerHTML = "<b> a chia hết cho b.</b>";

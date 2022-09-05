@@ -9,13 +9,13 @@
 <label for="tuoiHocSinh">nhập số tuổi :</label>
 <input type="text" size="10px" id="tuoiHocSinh">
 <input type="button" value="Check" onclick="CheckAge()">
-<p id="result2"><br></p>
+<p id="ketQua"><br></p>
 <script>
   function CheckAge() {
-    let age = parseInt(document.getElementById("tuoiHocSinh").value);
-    let res = document.getElementById("result2");
-    if (!isNaN(age)) {
-      if (age >=16) {
+    let tuoi = parseInt(document.getElementById("tuoiHocSinh").value);
+    let res = document.getElementById("ketQua");
+    if (!isNaN(tuoi)) {
+      if (tuoi >=16) {
         res.innerHTML = "<b>đủ điều kiện.</b>";
       } else {
         res.innerHTML = "<b> không đủ điều kiện.</b>";

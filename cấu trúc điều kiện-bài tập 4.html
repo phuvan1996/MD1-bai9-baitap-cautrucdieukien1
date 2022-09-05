@@ -12,16 +12,16 @@
 <input type="text" size="10px" id="so2">
 <label for="so3">số 3:</label>
 <input type="text" size="10px" id="so3">
-<input type="button" value="Check" onclick="findMax()">
-<p id="ketQua4"><br></p>
+<input type="button" value="Check" onclick="soLonNhat()">
+<p id="ketQua"><br></p>
 <script>
-  function findMax() {
+  function soLonNhat() {
     let so1 = parseInt(document.getElementById("so1").value);
     let so2 = parseInt(document.getElementById("so2").value);
     let so3 = parseInt(document.getElementById("so3").value);
-    let res = document.getElementById("ketQua4");
+    let res = document.getElementById("ketQua");
     if (isNaN(so1)||isNaN(so2)||isNaN(so3)) {
-      res.innerHTML = "<b>nhập vào 1 số.</b>"
+      res.innerHTML = "<b>vui lòng nhập số.</b>"
     } else {
       if (so1>so2) {
         if (so1>so3) {
@@ -40,4 +40,40 @@
   }
 </script>
 </body>
+<!--<body>-->
+<!--<p>nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</p>-->
+<!--<label for="so1">số 1</label>-->
+<!--<input type="text" size="10px" id="so1">-->
+<!--<label for="so2">số 2</label>-->
+<!--<input type="text" size="10px" id="so2">-->
+<!--<label for="so3">số 3</label>-->
+<!--<input type="text" size="10p" id="so3">-->
+<!--<input type="button" value="check" onclick="soLonNhat()">-->
+<!--<p id="ketQua"></p>-->
+<!--</body>-->
+<!--<script>-->
+<!--    function soLonNhat() {-->
+<!--        let so1 = parseInt(document.getElementById('so1').value);-->
+<!--        let so2 = parseInt(document.getElementById("so2").value);-->
+<!--        let so3 = parseInt(document.getElementById("so3").value);-->
+<!--        let res = document.getElementById("ketQua");-->
+<!--        if (isNaN(so1) ||isNaN(so2)|| isNaN(so3)){-->
+<!--            res.innerHTML="vui long nhap so"-->
+<!--        }else{-->
+<!--        if (so1>so2 && so1>so3){-->
+
+<!--            res.innerHTML="so co gia tri lon nhat la:"+so1-->
+<!--        }else if( so2>so3 && so2>so1){-->
+<!--            res.innerHTML="so co gia tri lon nhat la:"+so2-->
+<!--        }else if(so3>so2 &&so3>so1) {-->
+<!--            res.innerHTML = "so co gia tri lon nhat la:" + so3-->
+<!--            -->
+        //     so1>so2&&so1>so3?res.innerHTML="so co gia tri lon nhat la:"+so1:so2>so3&&so2>so1?res.innerHTML="so co gia tri lon nhat la:"+so2:so3>so2&&so3>so1?res.innerHTML="so co gia tri lon nhat la:"+so3:res.innerHTML="khong ton tai"
+        //     }
+        // }
+    //     isNaN(so1) || isNaN(so2) || isNaN(so3) ? res.innerHTML = "vui long nhap so" :
+    //         so1 > so2 && so1 > so3 ? res.innerHTML = "so co gia tri lon nhat la:" + so1 : so2 > so3 && so2 > so1 ? res.innerHTML = "so co gia tri lon nhat la:"
+    //         + so2 : so3 > so2 && so3 > so1 ? res.innerHTML = "so co gia tri lon nhat la:" + so3 : res.innerHTML = ''
+    // }
+</script>
 </html>

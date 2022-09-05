@@ -6,12 +6,12 @@
 </head>
 <body>
 <p><b>Bài 3 :</b>Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0.</p>
-<label for="checkNum">Number :</label>
+<label for="kiemTraSo">Number :</label>
 <input type="text" size="10px" id="kiemTraSo">
-<input type="button" value="KiemTraSo" onclick="soSanhSoLonHon0()">
+<input type="button" value="KiemTraSo" onclick="SoLonHon0()">
 <p id="ketQua"><br></p>
 <script>
-    function soSanhSoLonHon0() {
+    function SoLonHon0() {
         let num = parseInt(document.getElementById("kiemTraSo").value);
         let res = document.getElementById("ketQua");
         if (!isNaN(num)) {
